@@ -472,6 +472,19 @@ wheels = [
 ]
 
 [[package]]
+name = "import-ipynb"
+version = "0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "ipython" },
+    { name = "nbformat" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7d/5f/07f93b0e5a94b69a65eb108290ae0544210affeb24ec20cf219fe60b4e8e/import-ipynb-0.2.tar.gz", hash = "sha256:0a6db02db7973a35ed1bf007b837288b13374897282218e226d01a1eaecaff85", size = 5376, upload-time = "2024-10-09T06:04:53.734Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ec/62/e0b830773060d2a390aa923dcc8afc680d798bdbdadb6394f760fac62517/import_ipynb-0.2-py3-none-any.whl", hash = "sha256:cb9e41c65dd81ebaa8e1e3e1b591276f910fbaac9238960d6798aad28d4c323f", size = 4005, upload-time = "2024-10-09T06:04:52.598Z" },
+]
+
+[[package]]
 name = "importlib-metadata"
 version = "9.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -802,6 +815,8 @@ name = "llm-scratch"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "import-ipynb" },
+    { name = "ipykernel" },
     { name = "jupyterlab" },
     { name = "torch" },
     { name = "torchaudio" },
@@ -812,6 +827,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "import-ipynb", specifier = ">=0.2" },
+    { name = "ipykernel", specifier = ">=7.2.0" },
     { name = "jupyterlab", specifier = ">=4.5.7" },
     { name = "torch", specifier = ">=2.11.0" },
     { name = "torchaudio", specifier = ">=2.11.0" },
