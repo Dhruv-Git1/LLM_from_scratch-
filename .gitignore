@@ -5,6 +5,10 @@ build/
 dist/
 wheels/
 *.egg-info
-
+*.pth
+*.pt
+*.ckpt
+checkpoints/
+gpt2/
 # Virtual environments
 .venv
